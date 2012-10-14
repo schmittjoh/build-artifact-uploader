@@ -61,7 +61,7 @@ function getBuildDetails() {
 
         exit(1);
     }
-    if ( ! preg_match('#origin\t(?:git://github\.com/|git@github\.com:)([^/]+)/([^\.]+)\.git#', end($output), $match)) {
+    if ( ! preg_match('#origin\t(?:git://github\.com/|git@github\.com:)([^/]+)/([^/]+)\.git#', end($output), $match)) {
         echo sprintf('Could not extract GitHub login/repo from: %s', implode("\n", $output)).PHP_EOL;
 
         exit(1);
